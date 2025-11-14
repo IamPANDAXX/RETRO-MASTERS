@@ -8,7 +8,8 @@
 
 </head>
 <body>
-      <button onclick="window.location.href='gameplayer.php'">Jugar</button>
+    
+      <button onclick="window.location.href='gameplayer.php?id=1'">Jugar</button>
 
 
 </body>
