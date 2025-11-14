@@ -1,7 +1,7 @@
 <?php
 $file = $_GET['file'] ?? '';
 
-$path = __DIR__ . "/games/" . $file;
+$path = __DIR__ . "/../backend/games/" . $file;
 
 if (!file_exists($path)) {
     header("HTTP/1.1 404 Not Found");
@@ -10,6 +10,5 @@ if (!file_exists($path)) {
 
 header("Content-Type: application/x-shockwave-flash");
 header("Content-Length: " . filesize($path));
-
 readfile($path);
 exit;

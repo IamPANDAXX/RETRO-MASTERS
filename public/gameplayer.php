@@ -13,7 +13,6 @@ if (!$game) {
     die("Juego no encontrado 😢");
 }
 
-//Striker%20Force%20Heroes%202.swf
 ?>
 
 
@@ -26,7 +25,11 @@ if (!$game) {
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
 <body>
-    <object style="width:800px; height:600px;" src="<?= htmlspecialchars($game['archivo_url']) ?>"></object>
-
+    <object 
+        data="<?= htmlspecialchars($game['archivo_url']) ?>" 
+        type="application/x-shockwave-flash" 
+        width="800" 
+        height="600">
+    </object>
 </body>
 </html>
