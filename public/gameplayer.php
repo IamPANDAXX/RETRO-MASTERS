@@ -12,7 +12,11 @@ $game = $stmt->fetch(PDO::FETCH_ASSOC);
 if (!$game) {
     die("Juego no encontrado 😢");
 }
+
+//Striker%20Force%20Heroes%202.swf
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
