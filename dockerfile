@@ -1,6 +1,13 @@
 #usamos una imagen oficial de PHP con Apache
 FROM php:8.2-apache
 
+#instalamos dependencias para PDO PostgreSQL
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 #copiamos todo el repo al contenedor
 COPY . /var/www/html/
 
