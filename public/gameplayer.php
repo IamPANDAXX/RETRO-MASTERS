@@ -1,5 +1,5 @@
 <?php
-include "conexion/conexion.php" 
+include "../backend/conexion/conexion.php" 
 ?>
 <?php
 //obetenemos el juego con un GET por Id
