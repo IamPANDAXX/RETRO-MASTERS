@@ -16,7 +16,7 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RETRO-MASTERS</title>
-    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="imgs/logo-retro-master_transparente-ico.png" type="image/jpg">
     <!-- scrip ruffle para flash -->
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
