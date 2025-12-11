@@ -16,7 +16,7 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RETRO-MASTERS</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles2.css">
     <link rel="shortcut icon" href="imgs/logo-retro-master_transparente-ico.png" type="image/jpg">
     <!-- scrip ruffle para flash -->
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
@@ -27,34 +27,49 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
     
 <body>
+
     <?php include "complements/menu.php"; ?>
+   
+    <main>
+        <ul class='slider'>
+            <?php foreach ($games as $game): ?>
+            <li class='item' data-video="<?php echo htmlspecialchars($game['gif_url']); ?>">
+           
+                <img class="img-portada" src='<?php echo htmlspecialchars($game['portada_url']); ?>' 
+                 alt='<?php echo htmlspecialchars($game['titulo']); ?>'
+                 loading='lazy'>
+                
+                 <video class="video-portada" muted loop playsinline>
+                    <source src="" type="video/mp4">
+                 </video>
 
-    <div class="contenedor-general">
-    <?php foreach ($games as $game): ?>
-    <div class="card">
-        <div class="first-content">
-            <span><?php echo htmlspecialchars($game['titulo']); ?></span>
-        </div>
-    <div class="second-content">
-        <span>
-            <img class="s-content-img" src="<?php echo htmlspecialchars($game['portada_url']); ?>" alt="">
-        </span>
-    </div>
-    <button class="btn-53" onclick="window.location.href='gameplayer.php?id=<?= $game['id']; ?>'">
-        <div class="original">JUEGA</div>
-        <div class="letters">
-            
-            <span>A</span>
-            <span>H</span>
-            <span>O</span>
-            <span>R</span>
-            <span>A</span>
-        </div>
-    </button>
+            <div class='content'>
+                <h2 class='title'><?php echo htmlspecialchars($game['titulo']); ?></h2>
+                <p class='description'><?php echo htmlspecialchars($game['descripcion']); ?></p>
+                <button class="btn-53" onclick="window.location.href='gameplayer.php?id=<?= $game['id']; ?>'">
+                <div class="original"><img class="original-img" src="imgs/punta-de-flecha-del-boton-de-reproduccion.png" alt=""></div>
+                <div class="letters">
+                    
+                    <span>A</span>
+                    <span>H</span>
+                    <span>O</span>
+                    <span>R</span>
+                    <span>A</span>
+                </div>
+                </button>
+            </div>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+        <nav class='nav'>
+            <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+            <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+        </nav>
 
-    </div>
-    <?php endforeach; ?>
-    </div>
+        
+</main>
+
+    
 
     
    
@@ -62,7 +77,10 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </body>
 <script src="js/menu.js"></script>
+<script src="js/carrusel.js"></script>
 <script>
       AOS.init({ duration: 1200 });
 </script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
