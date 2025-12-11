@@ -514,3 +514,13 @@ main {
   transition-delay: 0.5s;
 }
 /* fin BOTON PLAY*/
+
+/* GAMEPLAYER FLASH*/
+.player-flash{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  height: 800px;
+  margin-top: 80px;
+}
+/* fin GAMEPLAYER FLASH*/
