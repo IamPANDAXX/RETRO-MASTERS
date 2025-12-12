@@ -271,10 +271,12 @@ main {
     opacity: 1;
   }
 
-  &:nth-child(3) { left: 50%; }
-  &:nth-child(4) { left: calc(50% + 220px); }
-  &:nth-child(5) { left: calc(50% + 440px); }
-  &:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+  &.item:nth-child(3) { left: 50%; }
+  &.item:nth-child(4) { left: calc(50% + 220px); }
+  &.item:nth-child(5) { left: calc(50% + 440px); }
+  &.item:nth-child(6) { left: calc(50% + 660px); }
+  &.item:nth-child(7) { left: calc(50% + 880px); }
+  &.item:nth-child(8) { left: calc(50% + 1100px); opacity: 0; }
 }
 
 
@@ -364,7 +366,9 @@ main {
     &:nth-child(3) { left: 50%; }
     &:nth-child(4) { left: calc(50% + 170px); }
     &:nth-child(5) { left: calc(50% + 340px); }
-    &:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+    &:nth-child(6) { left: calc(50% + 510px); }
+    &:nth-child(7) { left: calc(50% + 680px); }
+    &:nth-child(8) { left: calc(50% + 850px); opacity: 0; }
   }
 }
 
@@ -381,7 +385,9 @@ main {
     &:nth-child(3) { left: 50%; }
     &:nth-child(4) { left: calc(50% + 140px); }
     &:nth-child(5) { left: calc(50% + 280px); }
-    &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+    &:nth-child(6) { left: calc(50% + 420px); }
+    &:nth-child(7) { left: calc(50% + 560px); }
+    &:nth-child(8) { left: calc(50% + 700px); opacity: 0; }
   }
 }
 /*Fin CARRUSEL CARD GAMES*/
