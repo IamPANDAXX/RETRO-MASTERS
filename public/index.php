@@ -31,6 +31,7 @@ $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php include "complements/menu.php"; ?>
    
     <main>
+        <p class="derechos">© 2025 | Todos los derechos reservados a <strong>MASTERSWEB</strong></p>
         <ul class='slider'>
             <?php foreach ($games as $game): ?>
             <li class='item' data-video="<?php echo htmlspecialchars($game['gif_url']); ?>">
