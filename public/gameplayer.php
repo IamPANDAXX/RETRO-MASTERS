@@ -29,7 +29,7 @@ if (!$game) {
     <script>
     window.RufflePlayer = window.RufflePlayer || {};
     window.RufflePlayer.config = {
-        frameRate: 120
+    frameRate: null
     };
     </script>
 
