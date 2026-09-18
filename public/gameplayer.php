@@ -28,8 +28,10 @@ if (!$game) {
 
     <script>
     window.RufflePlayer = window.RufflePlayer || {};
+
     window.RufflePlayer.config = {
-    frameRate: null
+        frameRate: 120,
+        preferredRenderer: "webgpu"
     };
     </script>
 
