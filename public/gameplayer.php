@@ -25,6 +25,14 @@ if (!$game) {
     <link rel="stylesheet" href="css/styles.css">
     <!-- scrip ruffle para flash -->
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+    <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+        frameRate: 120
+    };
+    </script>
+
     <!--librerias AOS-->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -44,6 +52,5 @@ if (!$game) {
 <script>
       AOS.init({ duration: 1200 });
 </script>
-
 
 </html>
