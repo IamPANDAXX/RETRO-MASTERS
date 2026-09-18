@@ -45,27 +45,5 @@ if (!$game) {
       AOS.init({ duration: 1200 });
 </script>
 
-<script>
-window.RufflePlayer = window.RufflePlayer || {};
 
-window.addEventListener("load", () => {
-    const ruffle = window.RufflePlayer.newest();
-    const player = ruffle.createPlayer();
-
-    player.config = {
-        autoplay: "on",
-        unmuteOverlay: "hidden",
-        letterbox: "on",
-        scale: "showAll",
-        forceScale: false,
-        quality: "high"
-    };
-
-    document.querySelector(".player-flash").replaceWith(player);
-
-    player.load({
-        url: <?= json_encode($game['archivo_url']) ?>
-    });
-});
-</script>
 </html>
